@@ -62,6 +62,22 @@ const DashboardPage = () => {
         ></div>
       </div>
       <div
+        onClick={() =>
+          toast.success(
+            <>
+              <p>Feedback posted</p>
+              <p>
+                Mr. Amrit Deshpande has given feedback in Agoda{" "}
+                <a
+                  target="_blank"
+                  href="https://www.agoda.com/clarion-hotel-president/hotel/chennai-in.html?cid=1844104&ds=KMnPEAeyD7BH0Owc"
+                >
+                  View Feedback
+                </a>
+              </p>
+            </>
+          )
+        }
         className="Dashboard__rooms"
         dangerouslySetInnerHTML={{
           __html: Rooms.image,

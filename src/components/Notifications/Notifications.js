@@ -114,10 +114,10 @@ const Notifications = () => {
                       ""
                     )}
                     {d.type === "feedback" ? (
-                      <Link to="https://www.agoda.com/clarion-hotel-president/hotel/chennai-in.html?cid=1844104&ds=KMnPEAeyD7BH0Owc">
-                        <span className="clientrequest">Feedback</span>
-                      </Link>
+                      // <Link to="https://www.agoda.com/clarion-hotel-president/hotel/chennai-in.html?cid=1844104&ds=KMnPEAeyD7BH0Owc">
+                      <span className="clientrequest">Feedback</span>
                     ) : (
+                      // </Link>
                       ""
                     )}
                     {d.type === "escalation" ? (

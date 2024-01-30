@@ -1,6 +1,8 @@
 import "./Topbar.scss";
 import { NotiModal } from "../../utils/NotiModal";
 import Notifications from "../Notifications/Notifications";
+import { toast } from "react-toastify";
+import { Link } from "react-router-dom";
 
 const Topbar = () => {
   return (
@@ -12,7 +14,17 @@ const Topbar = () => {
         </h5>
 
         <div className="Topbar__buttonsIcons">
-          <button className="Topbar__newBooking">
+          <button
+            className="Topbar__newBooking"
+            onClick={() =>
+              toast.warning(
+                <Link to="/guest/folio">
+                  <p>Order Placed</p>
+                  <p>Room 405: Bathroom towel order placed</p>
+                </Link>
+              )
+            }
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
