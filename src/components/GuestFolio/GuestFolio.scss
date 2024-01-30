@@ -1,0 +1,73 @@
+@import "../../variables.scss";
+
+.GuestFolio {
+  padding-top: 24px;
+  .GF__head {
+    display: flex;
+    align-items: center;
+    gap: 0px;
+    // justify-content: center;
+    background-color: #e709091a;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+    .folio__orderitem {
+      max-width: 112px;
+      min-width: 112px;
+    }
+
+    .folio__qty {
+      max-width: 75px;
+      min-width: 75px;
+    }
+
+    .folio__price {
+      max-width: 100px;
+      min-width: 100px;
+    }
+
+    .folio__ordertime,
+    .folio__assignedto,
+    .folio__deliveredto,
+    .folio__deliverytime {
+      max-width: 146px;
+      min-width: 146px;
+    }
+    .folio__status {
+      min-width: 120px;
+      max-width: 120px;
+    }
+
+    span {
+      //   min-width: 75px;
+      max-width: 128px;
+      width: 100%;
+      padding: 0px 0px;
+      height: 50px;
+      color: $secondaryColor;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 150%;
+      letter-spacing: 0.56px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    svg {
+      cursor: pointer;
+    }
+  }
+
+  .GF__body span {
+    background-color: rgba(0, 0, 0, 0.01);
+
+    span {
+      color: $secondaryColor;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 150%;
+      letter-spacing: 0.56px;
+    }
+  }
+}

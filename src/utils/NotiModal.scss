@@ -1,0 +1,53 @@
+.test {
+  width: 0;
+  position: absolute;
+}
+.NotiModal__body,
+.openNoti {
+  background-color: #fff;
+  margin: 0% 0% 10% auto;
+  max-width: 500px;
+  width: 100%;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+  position: fixed;
+  right: -500px;
+  top: 0;
+  opacity: 0;
+  height: 100vh;
+  overflow: auto;
+  transition: right 1.5s ease, opacity 2s ease;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  .closeIcon {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    cursor: pointer;
+  }
+}
+.NotiModalBG {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  .openNoti {
+    width: 100%;
+    right: 0px;
+    opacity: 1;
+    transition: right 1.5s ease, opacity 1s ease;
+  }
+}
+
+.Notify__closeButtin {
+  border: 0;
+  background-color: inherit;
+}

@@ -1,0 +1,132 @@
+@import "../../variables.scss";
+
+.Notifications {
+  max-width: 500px;
+  width: 100%;
+  padding: 32px 18px;
+
+  h6 {
+    color: $secondaryColor;
+    font-feature-settings: "clig" off, "liga" off;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: -0.154px;
+    margin: 12px 0;
+  }
+
+  .Notifications__tab {
+    ul {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      position: relative;
+
+      &::after {
+        position: absolute;
+        content: "";
+        left: 0;
+        right: 0;
+        bottom: -16px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+      }
+
+      li {
+        color: #626366;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 21px;
+        letter-spacing: 0.56px;
+        cursor: pointer;
+        padding: 0 16px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        span {
+          color: $defaultColor;
+          font-feature-settings: "clig" off, "liga" off;
+          font-size: 12px;
+          font-weight: 600;
+          border-radius: 20px;
+          background-color: #fdecec;
+        }
+      }
+
+      .Selected__noti {
+        color: $defaultColor;
+        position: relative;
+        &::after {
+          position: absolute;
+          content: "";
+          left: 0;
+          right: 0;
+          bottom: -16px;
+          border-bottom: 2px solid $defaultColor;
+        }
+      }
+    }
+  }
+
+  .Notifications__msg {
+    .msg__content {
+      &:first-child {
+        padding-top: 24px;
+      }
+
+      .msg__top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        a {
+          text-decoration: none;
+
+          span {
+            cursor: pointer;
+          }
+        }
+      }
+
+      p {
+        margin: 12px 0;
+        font-size: 14px;
+      }
+
+      .clientrequest,
+      .serviceescalation,
+      .servicerequest {
+        color: #078769;
+        font-feature-settings: "clig" off, "liga" off;
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 12px;
+        border-radius: 24px;
+        background: #c9fed0;
+        width: max-content;
+        padding: 8px 12px;
+        margin-top: 12px;
+        cursor: pointer;
+      }
+
+      .msg__time {
+        color: #868686;
+        font-feature-settings: "clig" off, "liga" off;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 12px;
+        margin-right: 48px;
+      }
+
+      .servicerequest {
+        color: #d57300;
+        background-color: #fff3c9;
+      }
+
+      .serviceescalation {
+        background-color: #fdecec;
+        color: $defaultColor;
+      }
+    }
+  }
+}

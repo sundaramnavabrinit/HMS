@@ -1,0 +1,37 @@
+@import "../../../variables.scss";
+
+.RoomSuccess {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex-direction: column;
+
+  svg {
+    margin-bottom: 16px;
+  }
+
+  span {
+    color: $secondaryColor;
+    text-align: center;
+    font-feature-settings: "clig" off, "liga" off;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 150%;
+    letter-spacing: -0.154px;
+  }
+
+  button {
+    width: 100%;
+    margin-top: 16px;
+    color: #fcfcfc;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 21px;
+    padding: 16px;
+    border: 0;
+    background-color: $defaultColor;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+}

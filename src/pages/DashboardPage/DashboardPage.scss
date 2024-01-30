@@ -1,0 +1,287 @@
+@import "../../variables.scss";
+
+.DashboardPage {
+  .Dashboard__createBooking {
+    border-radius: 10px;
+    border: 1px solid var(--Stroke-Color, #eff0f6);
+    background: #fff;
+    box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.05);
+    height: 62px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 0px 16px;
+    margin: 16px 0px 24px;
+
+    & > * {
+      height: 46px;
+    }
+
+    p {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      color: $secondaryColor;
+      font-feature-settings: "clig" off, "liga" off;
+      font-size: 18px;
+      font-weight: 500;
+    }
+
+    input {
+      width: 340px;
+      padding: 0 16px;
+      color: $defaultGray;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 21px;
+      letter-spacing: 0.28px;
+      border-radius: 4px;
+      border: 1px solid #dadada;
+      background: #fff;
+    }
+
+    button {
+      width: 169px;
+      padding: 13px 16px;
+      background-color: $defaultColor;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 21px;
+      border: 0;
+      border-radius: 4px;
+      letter-spacing: 0.28px;
+      cursor: pointer;
+
+      a {
+        color: #fff;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .Dashboard__boxChart {
+    display: flex;
+    gap: 22px;
+    align-items: center;
+
+    .Dashboard__boxes {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      width: 576px;
+      flex: 2;
+      height: 320px;
+
+      .Dashboard__box {
+        display: flex;
+        flex-direction: column;
+        width: 148px;
+        // height: 126px;
+        height: 118px;
+        flex-shrink: 0;
+        padding: 15px;
+        border-radius: 10px;
+        border: 1px solid #eff0f6;
+        background: #fff;
+        box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.05);
+
+        svg {
+          max-width: 34px;
+          max-height: 34px;
+          width: 100%;
+          height: 100%;
+          margin-bottom: 14px;
+        }
+
+        p {
+          color: rgba(0, 0, 0, 0.7);
+          font-feature-settings: "clig" off, "liga" off;
+          font-size: 14px;
+          font-weight: 400;
+          letter-spacing: -0.154px;
+          margin-bottom: 4px;
+        }
+
+        span {
+          color: #000;
+          font-size: 24px;
+          font-weight: 700;
+        }
+      }
+    }
+
+    .Dashboard__chart {
+      max-width: 546px;
+      flex: 2;
+
+      svg {
+        width: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+
+  .Dashboard__rooms {
+    border-radius: 10px;
+    margin: 24px 0;
+  }
+  .Dashboard__activities {
+    display: flex;
+    align-items: baseline;
+    gap: 24px;
+    margin-bottom: 16px;
+
+    @mixin top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      grid-area: 24px;
+      background-color: inherit;
+
+      h4 {
+        color: #181818;
+        font-feature-settings: "clig" off, "liga" off;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 18px;
+      }
+
+      button {
+        color: #1ba8f8;
+        font-feature-settings: "clig" off, "liga" off;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 18px;
+        border: 0;
+        background-color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+      }
+    }
+
+    .Booking {
+      width: 712px;
+      background-color: #fff;
+      padding: 16px;
+      border-radius: 10px;
+      border: 1px solid #eff0f6;
+      background: #fff;
+      box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.05);
+      hr {
+        border-color: rgba(0, 0, 0, 0.09);
+        margin: 10px 0 16px;
+      }
+
+      .Booking__top {
+        @include top();
+      }
+
+      .Booking__table {
+        border-collapse: collapse;
+        width: 100%;
+        thead tr th {
+          background: #ebebeb;
+          padding: 16px;
+          color: $secondaryColor;
+          font-feature-settings: "clig" off, "liga" off;
+          font-size: 12px;
+          font-weight: 500;
+          line-height: 18px;
+        }
+
+        tbody {
+          tr td {
+            color: $secondaryColor;
+            font-feature-settings: "clig" off, "liga" off;
+            font-size: 12px;
+            font-weight: 500;
+            text-align: center;
+            line-height: 18px;
+            height: 50px;
+            border: 1px solid #dadada;
+          }
+        }
+      }
+    }
+
+    .Recent {
+      width: 400px;
+      background-color: #fff;
+      padding: 16px;
+      border-radius: 10px;
+      border: 1px solid #eff0f6;
+      background: #fff;
+      box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.05);
+
+      hr {
+        border-color: rgba(0, 0, 0, 0.09);
+        margin: 10px 0 16px;
+      }
+
+      .Recent__top {
+        @include top();
+      }
+
+      .Recent__lists {
+        display: flex;
+        flex-direction: column;
+        gap: 1;
+
+        .Recent__list {
+          background-color: #fff;
+
+          .Recent__list__roomNo {
+            font-size: 10px;
+            font-weight: 600;
+            line-height: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .request__customer {
+              background-color: #fdecec;
+              border-radius: 24px;
+              color: $defaultColor;
+              padding: 4px 6px;
+            }
+
+            .service__client {
+              color: #5a9300;
+              border-radius: 24px;
+              background-color: #eafbcf;
+              padding: 4px 6px;
+            }
+          }
+
+          .Customer__request,
+          .Staff__activity {
+            color: $secondaryColor;
+            font-feature-settings: "clig" off, "liga" off;
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 120%;
+
+            .list_name {
+              color: $secondaryColor;
+              font-weight: 600;
+            }
+          }
+
+          .Staff__activity {
+            .list_name {
+              color: #16bcdc;
+              position: relative;
+
+              &::before {
+                content: "@";
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,66 @@
+.CBP {
+  padding-top: 24px;
+  form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+
+    label {
+      width: calc(100% / 2 - 24px);
+      display: flex;
+      flex-direction: column;
+      align-items: baseline;
+      color: #5e6366;
+      font-size: 12px;
+      font-weight: 400;
+      gap: 8px;
+      position: relative;
+
+      input,
+      select {
+        padding: 8px 16px;
+        border-radius: 8px;
+        border: 1px solid #5e6366;
+        max-width: 100%;
+        width: 93%;
+        // height: 50px;
+        height: 34px;
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      select {
+        height: 52px;
+        max-width: 100%;
+        width: 100%;
+        background-color: #fff;
+        background-color: white;
+        border-radius: 4px;
+        display: inline-block;
+        line-height: 1.5em;
+        padding: 0.5em 3.5em 0.5em 1em;
+
+        /* reset */
+
+        margin: 0;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        appearance: none;
+        -moz-appearance: none;
+      }
+
+      svg {
+        position: absolute;
+        right: 10px;
+        top: 38px;
+      }
+    }
+  }
+
+  hr {
+    margin: 40px 0 10px;
+  }
+}
