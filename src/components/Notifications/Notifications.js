@@ -74,7 +74,7 @@ const Notifications = () => {
             className={`${notifyTab === "Unread" && "Selected__noti"}`}
           >
             Unread
-            <span>({data.slice(4).length})</span>
+            <span>({data.length})</span>
           </li>
           <li
             onClick={() => setNotifyTab("Read")}

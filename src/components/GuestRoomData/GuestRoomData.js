@@ -12,6 +12,8 @@ const GuestRoomData = () => {
   const [accept, setAccept] = useState(false);
   const [checkAvail, setCheckAvail] = useState(false);
   const [acceptedLateCheckout, setAcceptedLateCheckout] = useState(false);
+  const [paid, setPaid] = useState(false);
+
   return (
     <div className="GuestRoomData">
       <div className="GR__info">
@@ -31,17 +33,18 @@ const GuestRoomData = () => {
           </p>
           <p>
             <span>Check out:</span> <span>{GuestRoom.checkout}</span>
-            {accept && (
+            {!paid && accept && (
               <span
                 className="latecheckout"
-                onClick={() =>
-                  toast.info(
+                onClick={() => {
+                  toast.success(
                     <Link>
                       <p>Guest Paid late checkout fee</p>
                       <p>Room 405: Guest paid the late checkout fee</p>
                     </Link>
-                  )
-                }
+                  );
+                  setPaid(true);
+                }}
               >
                 Late Checkout
               </span>
@@ -93,10 +96,12 @@ const GuestRoomData = () => {
             <input defaultValue="₹00.00" />
           </span>
           <span className="buttons__AD">
-            {accept ? (
+            {!paid && accept ? (
               <button className="AD__awaiting" onClick={() => setAccept(false)}>
                 Awaiting Payment
               </button>
+            ) : paid ? (
+              <button>Paid</button>
             ) : (
               <>
                 <Modal
