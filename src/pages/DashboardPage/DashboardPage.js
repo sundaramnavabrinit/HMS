@@ -47,6 +47,7 @@ const DashboardPage = () => {
           ))}
         </div>
         <div
+          role="button"
           onClick={() =>
             toast.error(
               <Link to="/guest/room">
@@ -62,6 +63,7 @@ const DashboardPage = () => {
         ></div>
       </div>
       <div
+        role="button"
         onClick={() =>
           toast.success(
             <>
@@ -70,6 +72,7 @@ const DashboardPage = () => {
                 Mr. Amrit Deshpande has given feedback in Agoda{" "}
                 <a
                   target="_blank"
+                  rel="noreferrer"
                   href="https://www.agoda.com/clarion-hotel-president/hotel/chennai-in.html?cid=1844104&ds=KMnPEAeyD7BH0Owc"
                 >
                   View Feedback

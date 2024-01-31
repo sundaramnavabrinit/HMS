@@ -38,10 +38,10 @@ const GuestRoomData = () => {
                 className="latecheckout"
                 onClick={() => {
                   toast.success(
-                    <Link>
+                    <>
                       <p>Guest Paid late checkout fee</p>
                       <p>Room 405: Guest paid the late checkout fee</p>
-                    </Link>
+                    </>
                   );
                   setPaid(true);
                 }}
