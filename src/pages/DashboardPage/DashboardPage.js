@@ -6,10 +6,55 @@ import Booking from "../../components/Booking/Booking";
 import Recent from "../../components/Recent/Recent";
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
-import ResourceLoader from "../../lib/ResourceLoader";
-// import Boxes from "../../components/Boxes";
 
 const DashboardPage = () => {
+  const handleBoxClick = (i) => {
+    let toastType, toastMessage;
+
+    switch (i) {
+      case 0:
+        toastType = "warning";
+        toastMessage = (
+          <Link to="/guest/folio">
+            <p>Order Placed</p>
+            <p>Room 405: Bathroom towel order placed</p>
+          </Link>
+        );
+        break;
+      case 1:
+        toastType = "success";
+        toastMessage = (
+          <Link to="/guest/folio">
+            <p>Order Delivered</p>
+            <p>Room 405: Bathroom towel order delivered on time!</p>
+          </Link>
+        );
+        break;
+      case 3:
+        toastType = "warning";
+        toastMessage = (
+          <Link to="/guest/folio">
+            <p>Food placed</p>
+            <p>Room 405: Food order placed</p>
+          </Link>
+        );
+        break;
+      case 4:
+        toastType = "error";
+        toastMessage = (
+          <Link to="/guest/folio">
+            <p>Order Delivered</p>
+            <p>Room 405: Food order delayed</p>
+          </Link>
+        );
+        break;
+      default:
+        return; // Do nothing for other cases
+    }
+
+    toast[toastType](toastMessage);
+  };
+
   return (
     <div className="DashboardPage">
       <div className="Dashboard__createBooking">
@@ -26,8 +71,13 @@ const DashboardPage = () => {
 
       <div className="Dashboard__boxChart">
         <div className="Dashboard__boxes">
-          {Boxes?.map((box) => (
-            <div key={box.label} className="Dashboard__box">
+          {Boxes?.map((box, i) => (
+            <div
+              key={box.label}
+              className="Dashboard__box"
+              onClick={() => handleBoxClick(i)}
+              onKeyDown={() => {}}
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="34"
@@ -55,7 +105,6 @@ const DashboardPage = () => {
           </ResourceLoader> */}
         </div>
         <div
-          role="button"
           onClick={() =>
             toast.error(
               <Link to="/guest/room">
@@ -64,6 +113,7 @@ const DashboardPage = () => {
               </Link>
             )
           }
+          onKeyDown={() => {}}
           className="Dashboard__chart"
           dangerouslySetInnerHTML={{
             __html: ChartSvg.image,
@@ -71,7 +121,6 @@ const DashboardPage = () => {
         ></div>
       </div>
       <div
-        role="button"
         onClick={() =>
           toast.success(
             <>
@@ -89,6 +138,7 @@ const DashboardPage = () => {
             </>
           )
         }
+        onKeyDown={() => {}}
         className="Dashboard__rooms"
         dangerouslySetInnerHTML={{
           __html: Rooms.image,

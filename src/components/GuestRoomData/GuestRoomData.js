@@ -101,7 +101,7 @@ const GuestRoomData = () => {
                 Awaiting Payment
               </button>
             ) : paid ? (
-              <button>Paid</button>
+              <button>Late Checkout</button>
             ) : (
               <>
                 <Modal
