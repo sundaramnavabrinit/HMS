@@ -62,8 +62,8 @@
     .folio__assignedto,
     .folio__deliveredto,
     .folio__deliverytime {
-      max-width: 146px;
-      min-width: 146px;
+      max-width: 170px;
+      min-width: 170px;
     }
 
     .folio__status {
@@ -75,8 +75,8 @@
       border-radius: 3px;
       border-radius: 10px;
       margin: 0 auto;
-      min-width: 120px;
-      max-width: 120px;
+      min-width: 140px;
+      max-width: 140px;
     }
 
     .folio__placed {
@@ -110,6 +110,7 @@
   );
 }
 .wrapper .arrow {
+  flex: 1;
   font-size: 2rem;
   transition: 0.5s ease-in-out;
 }

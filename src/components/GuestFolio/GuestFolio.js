@@ -11,7 +11,7 @@ const GuestFolio = () => {
         <span className="folio__price">Price</span>
         <span className="folio__ordertime">Order time</span>
         <span className="folio__assignedto">Assigned to</span>
-        <span className="folio__deliveredto">Delivery at</span>
+        {/* <span className="folio__deliveredto">Delivery at</span> */}
         <span className="folio__deliverytime">Delivery time</span>
         <span className="folio__status">Status</span>
       </p>

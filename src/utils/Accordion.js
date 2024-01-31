@@ -25,9 +25,9 @@ const Accordion = () => {
               </span>
               <span className="folio__ordertime">{folio.orderTime}</span>
               <span className="folio__assignedto">{folio.assignedTo}</span>
-              <span className="folio__deliveredto">
+              {/* <span className="folio__deliveredto">
                 {folio.deliveredTo ? folio.deliveredTo : "--"}
-              </span>
+              </span> */}
               <span className="folio__deliverytime">
                 {folio.deliveryTime ? folio.deliveryTime : "--"}
               </span>
