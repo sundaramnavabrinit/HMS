@@ -37,7 +37,7 @@ const CBPersonal = ({ data, setData }) => {
           </svg>
         </label>
         <label>
-          Guest Sur Name
+          Guest Surname
           <input {...register("Guest-Sur-Name")} value="A" />
         </label>
         <label>
