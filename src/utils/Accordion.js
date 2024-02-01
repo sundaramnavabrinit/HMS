@@ -59,6 +59,7 @@ const AccordionItem = ({ top, moreInfo, status, isOpen, onClick }) => {
       <p
         className={`question-container ${isOpen ? "active" : ""}`}
         onClick={onClick}
+        onKeyDown={() => {}}
       >
         {top}
         <svg

@@ -30,6 +30,7 @@ const GuestMgmt = () => {
         <ul>
           {GuestTabs?.map((t) => (
             <li
+              onKeyDown={() => {}}
               key={t}
               onClick={() => setTab(t)}
               className={`${tab === t && "tab__selected"}`}

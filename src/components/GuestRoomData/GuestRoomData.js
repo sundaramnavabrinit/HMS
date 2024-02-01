@@ -36,6 +36,7 @@ const GuestRoomData = () => {
             {!paid && accept && (
               <span
                 className="latecheckout"
+                onKeyDown={() => {}}
                 onClick={() => {
                   toast.success(
                     <>
@@ -62,6 +63,7 @@ const GuestRoomData = () => {
           <span>Check out fee</span>
           <span
             className="buttons__AD"
+            onKeyDown={() => {}}
             onClick={() =>
               toast.warning(
                 <Link>
@@ -129,7 +131,7 @@ const GuestRoomData = () => {
         </p>
         <p className="GR__body">
           {GuestRoom.roomupdates.map((update, i) => (
-            <span key={i}>
+            <span key={update.datetime}>
               <span>{update.guestname}</span>
               <span>{update.datetime}</span>
               <span>{update.reason}</span>

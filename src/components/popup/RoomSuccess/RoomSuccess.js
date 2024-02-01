@@ -25,8 +25,8 @@ const RoomSuccess = ({ setShow }) => {
         onClick={() => {
           toast.success(
             <Link to="/roomsmgmt">
-              <p>Order Delivered!</p>
-              <p>Room 405 : Bathroom towel order delivered on time!</p>
+              <p>Room Occupied!</p>
+              <p>Room 405 : Room occuped by guest!</p>
             </Link>
           );
           setShow(false);

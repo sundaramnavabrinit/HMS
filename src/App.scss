@@ -11,7 +11,7 @@
 
     a {
       color: #757575;
-      text-decoration: underline;
+      text-decoration: none;
       font-weight: 900;
     }
   }
@@ -54,13 +54,10 @@
 
   .page-container {
     display: flex;
-    // gap: 24px;
 
     .page-side {
       height: 100%;
-      // min-height: 100vh;
       width: 246px;
-      // padding: 24px;
       border: 1px solid var(--Stroke-Color, #eff0f6);
       background: var(--Base-White-100, #fff);
       box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.05);
