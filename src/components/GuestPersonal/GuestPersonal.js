@@ -21,7 +21,7 @@ const GuestPersonal = () => {
           <input value="A" {...register("surname")} />
         </label>
         <label>
-          First name
+          First Name
           <input value="Amrit" {...register("firstName")} />
         </label>
         <label>
@@ -46,6 +46,13 @@ const GuestPersonal = () => {
             value={new Date("20/08/2020")}
             {...register("weddingdate")}
             type="date"
+            placeholder="DD/MM/YYYY"
+            style={{
+              padding: "8px",
+              fontSize: "16px",
+              border: "1px solid #ccc",
+              borderRadius: "4px",
+            }}
           />
         </label>
       </form>

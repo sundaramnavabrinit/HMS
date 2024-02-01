@@ -21,8 +21,8 @@ const GuestMgmt = () => {
         <h5>Room no: 405</h5>
         <p>
           <span>Guest name: Mr. Amrit Deshpande</span>
-          <span>Checked in: 16/10/2023</span>
-          <span>Check out: 29/12/2023</span>
+          <span>Checked in: 16/10/2023 12:00 hrs</span>
+          <span>Check out: 29/12/2023 12:00 hrs</span>
         </p>
       </div>
       <hr />

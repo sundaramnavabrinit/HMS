@@ -31,6 +31,7 @@ const CreateBooking = () => {
         <ul>
           {CBTabs?.map((t) => (
             <li
+              onKeyDown={() => {}}
               key={t}
               onClick={() => setTab(t)}
               className={`${tab === t && "tab__selected"}`}

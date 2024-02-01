@@ -21,11 +21,11 @@ const IDProof = ({ data, setData }) => {
         </label>
         <label>
           Date of issue
-          <input {...register("DOI")} type="date" />
+          <input {...register("DOI")} type="date" placeholder="DD/MM/YYYY" />
         </label>
         <label>
           Expiry date
-          <input {...register("Expiry")} type="date" />
+          <input {...register("Expiry")} type="date" placeholder="DD/MM/YYYY" />
         </label>
         <label>
           Passport number
@@ -37,11 +37,15 @@ const IDProof = ({ data, setData }) => {
         </label>
         <label>
           Date of issue
-          <input {...register("doi2")} type="date" />
+          <input {...register("doi2")} type="date" placeholder="DD/MM/YYYY" />
         </label>
         <label>
           Expiry date
-          <input {...register("expiry2")} type="date" />
+          <input
+            {...register("expiry2")}
+            type="date"
+            placeholder="DD/MM/YYYY"
+          />
         </label>
         <label>
           Visa number
@@ -53,11 +57,11 @@ const IDProof = ({ data, setData }) => {
         </label>
         <label>
           Date of issue
-          <input {...register("dokk")} type="date" />
+          <input {...register("dokk")} type="date" placeholder="DD/MM/YYYY" />
         </label>
         <label>
           Expiry date
-          <input {...register("edate")} type="date" />
+          <input {...register("edate")} type="date" placeholder="DD/MM/YYYY" />
         </label>
       </form>
       <hr />
