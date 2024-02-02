@@ -56,8 +56,8 @@ const CBPersonal = ({ data, setData }) => {
           />
         </label>
         <label>
-          Guest 1 Mobile Number
-          <input {...register("Guest1-Mobile-Number")} value="8012376554" />
+          Guest 1 Phone Number
+          <input {...register("Guest1-Phone-Number")} value="8012376554" />
         </label>
         <label>
           Guest 1 Date of Birth
