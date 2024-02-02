@@ -1,7 +1,10 @@
+import "./NotFoundPage.scss";
+
 const NotFoundPage = () => {
   return (
     <div className="NotFoundPage">
-      <h4>404, Page not found</h4>
+      <h2>404</h2>
+      <p>Sorry, Page not found</p>
     </div>
   );
 };

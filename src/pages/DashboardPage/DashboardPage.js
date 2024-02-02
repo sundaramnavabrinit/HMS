@@ -13,7 +13,7 @@ const DashboardPage = () => {
 
     switch (i) {
       case 0:
-        toastType = "warning";
+        toastType = "info";
         toastMessage = (
           <Link to="/guest/folio/Order%20Placed">
             <p>Order Placed</p>
@@ -31,7 +31,7 @@ const DashboardPage = () => {
         );
         break;
       case 3:
-        toastType = "warning";
+        toastType = "info";
         toastMessage = (
           <Link to="/guest/folio/Order%20Placed">
             <p>Food placed</p>
@@ -122,7 +122,7 @@ const DashboardPage = () => {
       </div>
       <div
         onClick={() =>
-          toast.success(
+          toast.info(
             <>
               <p>Feedback posted</p>
               <p>
