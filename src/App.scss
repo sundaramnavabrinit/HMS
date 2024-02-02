@@ -9,9 +9,11 @@
   .Toastify__toast-container {
     width: 400px !important;
 
-    a {
+    a,
+    .feedback {
       color: #757575;
       text-decoration: none;
+      cursor: pointer;
       font-weight: 900;
     }
   }

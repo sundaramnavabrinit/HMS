@@ -13,6 +13,8 @@ const GuestFolio = () => {
     } else {
       setShow("all");
     }
+
+    clearInterval(currentFolio);
   }, [currentFolio]);
 
   return (

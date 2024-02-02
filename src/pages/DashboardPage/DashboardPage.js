@@ -6,6 +6,7 @@ import Booking from "../../components/Booking/Booking";
 import Recent from "../../components/Recent/Recent";
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
+import feedback from "../../assets/images/feeback.png";
 
 const DashboardPage = () => {
   const handleBoxClick = (i) => {
@@ -53,6 +54,11 @@ const DashboardPage = () => {
     }
 
     toast[toastType](toastMessage);
+  };
+
+  const handleOpenInNewTab = () => {
+    const dataUrl = feedback;
+    window.open(dataUrl, "_blank");
   };
 
   return (
@@ -127,13 +133,15 @@ const DashboardPage = () => {
               <p>Feedback posted</p>
               <p>
                 Mr. Amrit Deshpande has given feedback in Agoda{" "}
-                <a
-                  target="_blank"
-                  rel="noreferrer"
-                  href="https://www.agoda.com/clarion-hotel-president/hotel/chennai-in.html?cid=1844104&ds=KMnPEAeyD7BH0Owc"
+                <span
+                  className="feedback"
+                  onClick={handleOpenInNewTab}
+                  // target="_blank"
+                  // rel="noreferrer"
+                  // href="https://www.agoda.com/clarion-hotel-president/hotel/chennai-in.html?cid=1844104&ds=KMnPEAeyD7BH0Owc"
                 >
                   View Feedback
-                </a>
+                </span>
               </p>
             </>
           )

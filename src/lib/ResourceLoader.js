@@ -13,6 +13,8 @@ const ResourceLoader = ({ resourceUrl, resourceName, children }) => {
       setData(response.data);
     };
     fetchData();
+
+    clearInterval(fetchData());
   }, [resourceUrl]);
 
   return (
