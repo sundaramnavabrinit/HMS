@@ -17,7 +17,8 @@ const Accordion = () => {
           top={
             <span key={folio.id}>
               <span className="folio__orderitem" title={folio.orderItem}>
-                {folio.orderItem}
+                {folio.orderItem.slice(0, 9)}
+                {folio.orderItem.length > 9 && "..."}
               </span>
               <span className="folio__qty">{folio.qty}</span>
               <span className="folio__price">
@@ -53,7 +54,6 @@ const Accordion = () => {
 };
 const AccordionItem = ({ top, moreInfo, status, isOpen, onClick }) => {
   const contentHeight = useRef();
-  console.log(contentHeight.current);
   return (
     <div className="wrapper">
       <p
