@@ -22,6 +22,7 @@
   }
 
   button {
+    // display: none;
     width: 100%;
     margin-top: 16px;
     color: #fcfcfc;
@@ -33,5 +34,10 @@
     background-color: $defaultColor;
     border-radius: 8px;
     cursor: pointer;
+  }
+
+  img {
+    max-width: 256px;
+    object-fit: contain;
   }
 }

@@ -15,8 +15,6 @@ const CreateBooking = () => {
   const [tab, setTab] = useState("personal");
   const [show, setShow] = useState(false);
 
-  console.log(tab);
-
   useEffect(() => {
     setTab(currentTab);
   }, [currentTab]);
@@ -43,7 +41,7 @@ const CreateBooking = () => {
       </div>
       {tab === "personal" ? <CBPersonal data={data} setData={setData} /> : null}
       {tab === "address" ? <CBAddress data={data} setData={setData} /> : null}
-      {tab === "id proof" ? <IDProof data={data} setData={setData} /> : null}
+      {tab === "iD proof" ? <IDProof data={data} setData={setData} /> : null}
       {tab === "room" ? <CBRooms /> : null}
 
       <div className="CB__next">

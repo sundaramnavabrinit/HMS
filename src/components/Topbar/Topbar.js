@@ -10,7 +10,19 @@ const Topbar = () => {
       <div className="Topbar">
         <h5 className="Topbar__user">
           <span>Good Morning</span>
-          <strong>Sam Ragunath</strong>
+          <strong
+            onKeyDown={() => {}}
+            onClick={() =>
+              toast.warning(
+                <Link to="/guest/room">
+                  <p>Guest Check-out remainder</p>
+                  <p>Room 405: Guest check-out will be 14:00hrs</p>
+                </Link>
+              )
+            }
+          >
+            Sam Ragunath
+          </strong>
         </h5>
 
         <div className="Topbar__buttonsIcons">
@@ -18,9 +30,9 @@ const Topbar = () => {
             className="Topbar__newBooking"
             onClick={() =>
               toast.warning(
-                <Link to="/guest/folio">
-                  <p>Order Placed</p>
-                  <p>Room 405: Bathroom towel order placed</p>
+                <Link to="/guest/room">
+                  <p>Guest Check-out remainder</p>
+                  <p>Room 405: Guest check-out will be 12:00hrs</p>
                 </Link>
               )
             }

@@ -28,6 +28,10 @@ function App() {
               />
               <Route path="/roomsmgmt" element={<RoomsManagement />} />
               <Route path="/guest/:currentTab" element={<GuestMgmt />} />
+              <Route
+                path="/guest/:currentTab/:currentFolio?"
+                element={<GuestMgmt />}
+              />
               <Route path="*" element={<NotFoundPage />} />
             </Routes>
           </div>

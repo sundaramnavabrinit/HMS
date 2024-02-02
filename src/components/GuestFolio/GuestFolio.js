@@ -1,8 +1,20 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./GuestFolio.scss";
 import Accordion from "../../utils/Accordion";
+import { useParams } from "react-router-dom";
 
 const GuestFolio = () => {
+  const [show, setShow] = useState("all");
+  const { currentFolio } = useParams();
+
+  useEffect(() => {
+    if (currentFolio) {
+      setShow(currentFolio);
+    } else {
+      setShow("all");
+    }
+  }, [currentFolio]);
+
   return (
     <div className="GuestFolio">
       <p className="GF__head">
@@ -15,7 +27,7 @@ const GuestFolio = () => {
         <span className="folio__deliverytime">Delivery time</span>
         <span className="folio__status">Status</span>
       </p>
-      <Accordion />
+      <Accordion currentFolioData={show} />
     </div>
   );
 };

@@ -1,9 +1,20 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import FolioData from "../data/FolioData";
 import "./Accordion.scss";
 
-const Accordion = () => {
+const Accordion = ({ currentFolioData }) => {
   const [activeIndex, setActiveIndex] = useState();
+  const [folioFiltered, setFolioFiltered] = useState([]);
+
+  useEffect(() => {
+    if (currentFolioData === "all") {
+      let filter = FolioData.filter((data) => data.status !== "Order Placed");
+      setFolioFiltered(filter);
+    } else {
+      let filter = FolioData.filter((data) => data.status === currentFolioData);
+      setFolioFiltered(filter);
+    }
+  }, [currentFolioData]);
 
   const handleItemClick = (index) => {
     setActiveIndex((prevIndex) => (prevIndex === index ? null : index));
@@ -11,7 +22,7 @@ const Accordion = () => {
 
   return (
     <div className="Accordion">
-      {FolioData.map((folio) => (
+      {folioFiltered.map((folio) => (
         <AccordionItem
           key={folio.id}
           top={

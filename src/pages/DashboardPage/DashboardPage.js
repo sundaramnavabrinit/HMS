@@ -15,7 +15,7 @@ const DashboardPage = () => {
       case 0:
         toastType = "warning";
         toastMessage = (
-          <Link to="/guest/folio">
+          <Link to="/guest/folio/Order%20Placed">
             <p>Order Placed</p>
             <p>Room 405: Bathroom towel order placed</p>
           </Link>
@@ -24,7 +24,7 @@ const DashboardPage = () => {
       case 1:
         toastType = "success";
         toastMessage = (
-          <Link to="/guest/folio">
+          <Link to="/guest/folio/Delivered">
             <p>Order Delivered</p>
             <p>Room 405: Bathroom towel order delivered on time!</p>
           </Link>
@@ -33,7 +33,7 @@ const DashboardPage = () => {
       case 3:
         toastType = "warning";
         toastMessage = (
-          <Link to="/guest/folio">
+          <Link to="/guest/folio/Order%20Placed">
             <p>Food placed</p>
             <p>Room 405: Food order placed</p>
           </Link>
@@ -42,8 +42,8 @@ const DashboardPage = () => {
       case 4:
         toastType = "error";
         toastMessage = (
-          <Link to="/guest/folio">
-            <p>Order Delivered</p>
+          <Link to="/guest/folio/Delay">
+            <p>Order Delayed</p>
             <p>Room 405: Food order delayed</p>
           </Link>
         );

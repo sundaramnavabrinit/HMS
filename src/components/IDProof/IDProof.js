@@ -1,16 +1,18 @@
-import { useForm } from "react-hook-form";
+// import { useForm } from "react-hook-form";
 import "../CBAddress/CBA.scss";
+import aadhar from "../../assets/images/aadhar.webp";
 
 const IDProof = ({ data, setData }) => {
-  const { register, handleSubmit } = useForm();
+  // const { register, handleSubmit } = useForm();
 
-  const onSubmit = (data) => {
-    setData(data);
-  };
+  // const onSubmit = (data) => {
+  //   setData(data);
+  // };
 
   return (
     <div className="IDProof">
-      <form onSubmit={handleSubmit(onSubmit)}>
+      <img src={aadhar} alt="" />
+      {/* <form onSubmit={handleSubmit(onSubmit)}>
         <label>
           ID proof type
           <input {...register("idproof")} value="Aadhar card" />
@@ -63,7 +65,7 @@ const IDProof = ({ data, setData }) => {
           Expiry date
           <input {...register("edate")} type="date" placeholder="DD/MM/YYYY" />
         </label>
-      </form>
+      </form> */}
       <hr />
     </div>
   );

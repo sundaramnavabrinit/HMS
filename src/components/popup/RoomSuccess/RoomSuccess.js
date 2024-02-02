@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import "./RoomSuccess.scss";
 import { toast } from "react-toastify";
+import QRsample from "../../../assets/images/QRsample.svg";
 
 const RoomSuccess = ({ setShow }) => {
   return (
@@ -21,19 +22,22 @@ const RoomSuccess = ({ setShow }) => {
       </svg>
       <span>Room 405</span>
       <span>Successfully allocated!</span>
-      <button
-        onClick={() => {
-          toast.success(
-            <Link to="/roomsmgmt">
-              <p>Room Occupied!</p>
-              <p>Room 405 : Room occuped by guest!</p>
-            </Link>
-          );
-          setShow(false);
-        }}
-      >
-        Generate QR Code
-      </button>
+      <img src={QRsample} alt="QR Sample" />
+      <Link to="/dashboard">
+        <button
+          onClick={() => {
+            toast.success(
+              <Link to="/roomsmgmt">
+                <p>Room Checked In!</p>
+                <p>Room 405 : Room Checkedin by guest!</p>
+              </Link>
+            );
+            setShow(false);
+          }}
+        >
+          Scan Complete
+        </button>
+      </Link>
     </div>
   );
 };

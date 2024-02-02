@@ -5,11 +5,11 @@ import { Link } from "react-router-dom";
 
 const CBRooms = ({ roomData }) => {
   const [selectRoom, setSelectRoom] = useState({});
+  const [roomNo, setRoomNo] = useState(null);
 
   const RoomSelected = (roomno) => {
     if (!roomData?.length) return;
     let response = roomData.find((room) => room.room === roomno);
-    console.log(response);
     if (!response) setSelectRoom({});
     if (response) setSelectRoom(response);
   };
@@ -58,10 +58,23 @@ const CBRooms = ({ roomData }) => {
               <span>
                 {RN?.rooms?.map((el) => (
                   <span
-                    style={{ background: el.color }}
+                    onKeyDown={() => {}}
+                    style={{
+                      background:
+                        roomNo === 405 || el.no != "405"
+                          ? el.color
+                          : roomData?.length
+                          ? el.color
+                          : "rgb(201, 254, 208)",
+                    }}
                     key={el?.no}
-                    onClick={() => RoomSelected(el.no)}
+                    onClick={() => {
+                      roomData?.length ? RoomSelected(el.no) : setRoomNo(el.no);
+                    }}
                     className={`
+                    ${
+                      roomNo === 405 && roomNo === el.no && "GuestRoomSelection"
+                    }
                     ${el.color === "#FFB4B0" && "roomhover"}
                     ${
                       selectRoom?.room &&

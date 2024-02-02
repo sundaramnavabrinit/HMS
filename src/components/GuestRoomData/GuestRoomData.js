@@ -32,8 +32,22 @@ const GuestRoomData = () => {
             <span>Check in:</span> <span>{GuestRoom.checkin}</span>
           </p>
           <p>
-            <span>Check out:</span> <span>{GuestRoom.checkout}</span>
-            {!paid && accept && (
+            <span>Check out:</span>{" "}
+            <span
+              onKeyDown={() => {}}
+              onClick={() => {
+                toast.success(
+                  <>
+                    <p>Guest Paid late checkout fee</p>
+                    <p>Room 405: Guest paid the late checkout fee</p>
+                  </>
+                );
+                setPaid(true);
+              }}
+            >
+              {GuestRoom.checkout}
+            </span>
+            {/* {!paid && accept && (
               <span
                 className="latecheckout"
                 onKeyDown={() => {}}
@@ -49,7 +63,7 @@ const GuestRoomData = () => {
               >
                 Late Checkout
               </span>
-            )}
+            )} */}
           </p>
         </div>
       </div>
