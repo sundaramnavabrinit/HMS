@@ -1,2 +1,2 @@
-const CBTabs = ["personal", "address", "id proof", "room"];
+const CBTabs = ["personal", "address", "iD proof", "room"];
 export default CBTabs;
