@@ -29,7 +29,7 @@ const RoomSuccess = ({ setShow }) => {
             toast.success(
               <Link to="/roomsmgmt">
                 <p>Room Checked In!</p>
-                <p>Room 405 : Room Checkedin by guest!</p>
+                <p>Room 405 : Room Checked In by Mr. Amrit Deshpande!</p>
               </Link>
             );
             setShow(false);

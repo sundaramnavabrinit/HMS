@@ -145,7 +145,7 @@ const GuestRoomData = () => {
         </p>
         <p className="GR__body">
           {GuestRoom.roomupdates.map((update, i) => (
-            <span key={update.datetime}>
+            <span key={`${update.datetime}${i}`}>
               <span>{update.guestname}</span>
               <span>{update.datetime}</span>
               <span>{update.reason}</span>

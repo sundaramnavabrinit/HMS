@@ -136,9 +136,7 @@ const DashboardPage = () => {
                 <span
                   className="feedback"
                   onClick={handleOpenInNewTab}
-                  // target="_blank"
-                  // rel="noreferrer"
-                  // href="https://www.agoda.com/clarion-hotel-president/hotel/chennai-in.html?cid=1844104&ds=KMnPEAeyD7BH0Owc"
+                  onKeyDown={() => {}}
                 >
                   View Feedback
                 </span>
