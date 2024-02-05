@@ -103,7 +103,7 @@ const GuestRoomData = () => {
             <div
               className="Dashboard__chart"
               dangerouslySetInnerHTML={{
-                __html: Rooms.image,
+                __html: Rooms.avail,
               }}
             />
           </Modal>
@@ -145,7 +145,7 @@ const GuestRoomData = () => {
         </p>
         <p className="GR__body">
           {GuestRoom.roomupdates.map((update, i) => (
-            <span key={`${update.datetime}${i}`}>
+            <span key={`${update.reason}`}>
               <span>{update.guestname}</span>
               <span>{update.datetime}</span>
               <span>{update.reason}</span>
