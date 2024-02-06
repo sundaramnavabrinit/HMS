@@ -24,7 +24,7 @@ const FolioData = [
   },
   {
     id: 1235,
-    orderItem: "Fried Rice",
+    orderItem: "Chicken Chinthamani",
     qty: 1,
     price: "",
     orderTime: "16/01/2024 22:50",
@@ -141,7 +141,7 @@ const FolioData = [
   },
   {
     id: 127,
-    orderItem: "Chicken Fried Rice",
+    orderItem: "Chicken Chinthamani",
     qty: 2,
     price: "250.00",
     orderTime: "16/01/2024 23:20",

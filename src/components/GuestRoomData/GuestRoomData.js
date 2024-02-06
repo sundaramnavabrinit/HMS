@@ -94,7 +94,7 @@ const GuestRoomData = () => {
         </p>
         <p className="request__body">
           <span>Late check-out</span>
-          <span>23/01/2024</span>
+          <span>17/01/2024</span>
           <span>02:00 hrs</span>
           <Modal
             name="Check Availability"

@@ -13,7 +13,8 @@ const Accordion = ({ currentFolioData }) => {
     } else {
       let filter = FolioData.filter(
         (data) =>
-          data.status === currentFolioData && data.orderItem !== "Fried Rice"
+          data.status === currentFolioData &&
+          data.orderItem !== "Chicken Chinthamani"
       );
       setFolioFiltered(filter);
     }
@@ -21,7 +22,7 @@ const Accordion = ({ currentFolioData }) => {
       let filterData = FolioData.filter((data) => data.status !== "Delay");
       let filteredOrders = filterData.filter((order) => {
         if (order.status === "Order Placed") {
-          if (order.orderItem === "Fried Rice") {
+          if (order.orderItem === "Chicken Chinthamani") {
             return true;
           } else {
             return false;
@@ -35,11 +36,11 @@ const Accordion = ({ currentFolioData }) => {
     }
   }, [currentFolioData]);
 
-  console.log(currentFolioData);
-
   const handleItemClick = (index) => {
     setActiveIndex((prevIndex) => (prevIndex === index ? null : index));
   };
+
+  console.log(FolioData);
 
   return (
     <div className="Accordion">

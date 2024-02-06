@@ -17,7 +17,7 @@ const Recent = () => {
     {
       room: 1222,
       name: "Amrit Deshpande",
-      message: "requested for Fried rice",
+      message: "requested for Chicken Chinthamani",
       time: "20 min ago",
       activity: "request",
     },
