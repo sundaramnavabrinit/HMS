@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import "./RoomSuccess.scss";
 import { toast } from "react-toastify";
-import QRsample from "../../../assets/images/QRsample.svg";
+import QRsample from "../../../assets/images/QRcode.png";
 
 const RoomSuccess = ({ setShow }) => {
   return (

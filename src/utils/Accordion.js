@@ -7,11 +7,14 @@ const Accordion = ({ currentFolioData }) => {
   const [folioFiltered, setFolioFiltered] = useState([]);
 
   useEffect(() => {
-    if (currentFolioData === "all") {
+    if (currentFolioData === "all" || currentFolioData === "Delay") {
       let filter = FolioData.filter((data) => data.status !== "Order Placed");
       setFolioFiltered(filter.reverse());
     } else {
-      let filter = FolioData.filter((data) => data.status === currentFolioData);
+      let filter = FolioData.filter(
+        (data) =>
+          data.status === currentFolioData && data.orderItem !== "Fried Rice"
+      );
       setFolioFiltered(filter);
     }
     if (currentFolioData === "foodorder") {

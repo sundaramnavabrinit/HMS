@@ -57,6 +57,17 @@ const DashboardPage = () => {
           </div>
         );
         break;
+      case 5:
+        toastType = "error";
+        toastMessage = (
+          <div onClick={() => toast.dismiss()}>
+            <Link to="/guest/folio">
+              <p>Order Delivered</p>
+              <p>Room 405: Food order delivered</p>
+            </Link>
+          </div>
+        );
+        break;
       default:
         return; // Do nothing for other cases
     }
