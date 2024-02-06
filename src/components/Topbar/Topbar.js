@@ -14,10 +14,12 @@ const Topbar = () => {
             onKeyDown={() => {}}
             onClick={() =>
               toast.warning(
-                <Link to="/guest/room">
-                  <p>Guest Check-out remainder</p>
-                  <p>Room 405: Guest check-out will be 14:00hrs</p>
-                </Link>
+                <div onClick={() => toast.dismiss()}>
+                  <Link to="/guest/room">
+                    <p>Guest Check-out remainder</p>
+                    <p>Room 405: Guest check-out will be 14:00hrs</p>
+                  </Link>
+                </div>
               )
             }
           >
@@ -30,10 +32,12 @@ const Topbar = () => {
             className="Topbar__newBooking"
             onClick={() =>
               toast.warning(
-                <Link to="/guest/room">
-                  <p>Guest Check-out remainder</p>
-                  <p>Room 405: Guest check-out will be 12:00hrs</p>
-                </Link>
+                <div onClick={() => toast.dismiss()}>
+                  <Link to="/guest/room">
+                    <p>Guest Check-out remainder</p>
+                    <p>Room 405: Guest check-out will be 12:00hrs</p>
+                  </Link>
+                </div>
               )
             }
           >

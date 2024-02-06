@@ -27,10 +27,12 @@ const RoomSuccess = ({ setShow }) => {
         <button
           onClick={() => {
             toast.success(
-              <Link to="/roomsmgmt">
-                <p>Room Checked-In!</p>
-                <p>Room 405 : Room Checked-In by Mr. Amrit Deshpande!</p>
-              </Link>
+              <div onClick={() => toast.dismiss()}>
+                <Link to="/roomsmgmt">
+                  <p>Room Checked-In!</p>
+                  <p>Room 405 : Room Checked-In by Mr. Amrit Deshpande!</p>
+                </Link>
+              </div>
             );
             setShow(false);
           }}

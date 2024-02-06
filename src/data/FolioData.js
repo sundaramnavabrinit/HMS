@@ -23,6 +23,24 @@ const FolioData = [
     ],
   },
   {
+    id: 1235,
+    orderItem: "Fried Rice",
+    qty: 1,
+    price: "",
+    orderTime: "16/01/2024 22:50",
+    assignedTo: "Anees Devan",
+    deliveredTo: "",
+    deliveryTime: "",
+    status: "Order Placed",
+    moreInfo: [
+      {
+        notes: "Order placed by Guest",
+        escalatedTo: "--",
+        time: "16/01/24  22:50",
+      },
+    ],
+  },
+  {
     id: 124,
     orderItem: "Face Towel",
     qty: 1,

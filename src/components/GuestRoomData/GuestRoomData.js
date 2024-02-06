@@ -37,10 +37,10 @@ const GuestRoomData = () => {
               onKeyDown={() => {}}
               onClick={() => {
                 toast.success(
-                  <>
+                  <div onClick={() => toast.dismiss()}>
                     <p>Guest Paid late checkout fee</p>
                     <p>Room 405: Guest paid the late checkout fee</p>
-                  </>
+                  </div>
                 );
                 setPaid(true);
               }}
@@ -80,10 +80,12 @@ const GuestRoomData = () => {
             onKeyDown={() => {}}
             onClick={() =>
               toast.warning(
-                <Link>
-                  <p>Guest Check-out remainder</p>
-                  <p>Room 405: Guest check-out will be 12:00hrs</p>
-                </Link>
+                <div onClick={() => toast.dismiss()}>
+                  <Link>
+                    <p>Guest Check-out remainder</p>
+                    <p>Room 405: Guest check-out will be 12:00hrs</p>
+                  </Link>
+                </div>
               )
             }
           >
@@ -92,7 +94,7 @@ const GuestRoomData = () => {
         </p>
         <p className="request__body">
           <span>Late check-out</span>
-          <span>24/01/2024</span>
+          <span>23/01/2024</span>
           <span>02:00 hrs</span>
           <Modal
             name="Check Availability"

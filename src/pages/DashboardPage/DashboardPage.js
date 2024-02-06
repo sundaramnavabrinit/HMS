@@ -16,37 +16,45 @@ const DashboardPage = () => {
       case 0:
         toastType = "info";
         toastMessage = (
-          <Link to="/guest/folio/Order%20Placed">
-            <p>Order Placed</p>
-            <p>Room 405: Bathroom towel order placed</p>
-          </Link>
+          <div onClick={() => toast.dismiss()}>
+            <Link to="/guest/folio/Order%20Placed">
+              <p>Order Placed</p>
+              <p>Room 405: Bathroom towel order placed</p>
+            </Link>
+          </div>
         );
         break;
       case 1:
         toastType = "success";
         toastMessage = (
-          <Link to="/guest/folio/Delivered">
-            <p>Order Delivered</p>
-            <p>Room 405: Bathroom towel order delivered on time!</p>
-          </Link>
+          <div onClick={() => toast.dismiss()}>
+            <Link to="/guest/folio/Delivered">
+              <p>Order Delivered</p>
+              <p>Room 405: Bathroom towel order delivered on time!</p>
+            </Link>
+          </div>
         );
         break;
       case 3:
         toastType = "info";
         toastMessage = (
-          <Link to="/guest/folio/Order%20Placed">
-            <p>Food placed</p>
-            <p>Room 405: Food order placed</p>
-          </Link>
+          <div onClick={() => toast.dismiss()}>
+            <Link to="/guest/folio/foodorder">
+              <p>Food placed</p>
+              <p>Room 405: Food order placed</p>
+            </Link>
+          </div>
         );
         break;
       case 4:
         toastType = "error";
         toastMessage = (
-          <Link to="/guest/folio/Delay">
-            <p>Order Delayed</p>
-            <p>Room 405: Food order delayed</p>
-          </Link>
+          <div onClick={() => toast.dismiss()}>
+            <Link to="/guest/folio/Delay">
+              <p>Order Delayed</p>
+              <p>Room 405: Food order delayed</p>
+            </Link>
+          </div>
         );
         break;
       default:
@@ -103,20 +111,17 @@ const DashboardPage = () => {
               <span>{box.value}</span>
             </div>
           ))}
-          {/* <ResourceLoader
-            resourceUrl="http://localhost:8000/dashboard/boxes"
-            resourceName="Boxes"
-          >
-            <Boxes />
-          </ResourceLoader> */}
         </div>
+
         <div
           onClick={() =>
             toast.error(
-              <Link to="/guest/room">
-                <p>Late Check-out request Raised</p>
-                <p>Room 405: late checkout request</p>
-              </Link>
+              <div onClick={() => toast.dismiss()}>
+                <Link to="/guest/room">
+                  <p>Late Check-out request Raised</p>
+                  <p>Room 405: late checkout request</p>
+                </Link>
+              </div>
             )
           }
           onKeyDown={() => {}}
@@ -126,6 +131,7 @@ const DashboardPage = () => {
           }}
         ></div>
       </div>
+
       <div
         onClick={() =>
           toast.info(

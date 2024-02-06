@@ -3,7 +3,7 @@ const GuestData = {
   roomno: 405,
   roomname: "Executive club double",
   checkin: "16/01/2024  12:00 hrs",
-  checkout: "22/01/2024  12:00 hrs",
+  checkout: "23/01/2024  12:00 hrs",
   roomupdates: [
     {
       guestname: "Mr. A. Amrit Deshpande",

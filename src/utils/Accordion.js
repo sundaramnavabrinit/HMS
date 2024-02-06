@@ -9,12 +9,30 @@ const Accordion = ({ currentFolioData }) => {
   useEffect(() => {
     if (currentFolioData === "all") {
       let filter = FolioData.filter((data) => data.status !== "Order Placed");
-      setFolioFiltered(filter);
+      setFolioFiltered(filter.reverse());
     } else {
       let filter = FolioData.filter((data) => data.status === currentFolioData);
       setFolioFiltered(filter);
     }
+    if (currentFolioData === "foodorder") {
+      let filterData = FolioData.filter((data) => data.status !== "Delay");
+      let filteredOrders = filterData.filter((order) => {
+        if (order.status === "Order Placed") {
+          if (order.orderItem === "Fried Rice") {
+            return true;
+          } else {
+            return false;
+          }
+        } else {
+          return true;
+        }
+      });
+
+      setFolioFiltered(filteredOrders);
+    }
   }, [currentFolioData]);
+
+  console.log(currentFolioData);
 
   const handleItemClick = (index) => {
     setActiveIndex((prevIndex) => (prevIndex === index ? null : index));
@@ -37,9 +55,6 @@ const Accordion = ({ currentFolioData }) => {
               </span>
               <span className="folio__ordertime">{folio.orderTime}</span>
               <span className="folio__assignedto">{folio.assignedTo}</span>
-              {/* <span className="folio__deliveredto">
-                {folio.deliveredTo ? folio.deliveredTo : "--"}
-              </span> */}
               <span className="folio__deliverytime">
                 {folio.deliveryTime ? folio.deliveryTime : "--"}
               </span>
@@ -50,7 +65,11 @@ const Accordion = ({ currentFolioData }) => {
                 ${folio.status === "Delay" && "folio__delay"}
                 `}
               >
-                <span>{folio.status}</span>
+                <span>
+                  {currentFolioData === "all" && folio.status === "Delay"
+                    ? "Order Delivered"
+                    : folio.status}
+                </span>
               </span>
             </span>
           }
@@ -58,12 +77,20 @@ const Accordion = ({ currentFolioData }) => {
           status={folio.status}
           isOpen={activeIndex === folio.id}
           onClick={() => handleItemClick(folio.id)}
+          currentFolioData={currentFolioData}
         />
       ))}
     </div>
   );
 };
-const AccordionItem = ({ top, moreInfo, status, isOpen, onClick }) => {
+const AccordionItem = ({
+  top,
+  moreInfo,
+  status,
+  isOpen,
+  onClick,
+  currentFolioData,
+}) => {
   const contentHeight = useRef();
   return (
     <div className="wrapper">
@@ -171,7 +198,7 @@ const AccordionItem = ({ top, moreInfo, status, isOpen, onClick }) => {
             </p>
           </>
         ))}
-        {status === "Delay" ? (
+        {status === "Delay" && currentFolioData === "all" ? (
           <p className="accordion__content">
             <svg
               className="accordion__icon"
