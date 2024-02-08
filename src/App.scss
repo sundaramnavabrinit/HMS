@@ -9,12 +9,15 @@
   .Toastify__toast-container {
     width: 400px !important;
 
+    .Toastify__toast-theme--light,
     a,
     .feedback {
+      --toastify-font-family: "Inter", "Arial", sans-serif;
+      font-family: "Inter", "Arial", sans-serif;
       color: #757575;
       text-decoration: none;
       cursor: pointer;
-      font-weight: 900;
+      font-weight: 600;
     }
   }
 

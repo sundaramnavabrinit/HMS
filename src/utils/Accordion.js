@@ -49,7 +49,14 @@ const Accordion = ({ currentFolioData }) => {
           key={folio.id}
           top={
             <span key={folio.id}>
-              <span className="folio__orderitem" title={folio.orderItem}>
+              <span
+                className="folio__orderitem"
+                title={
+                  folio.orderItem === "Chicken Chinthamani"
+                    ? "Chicken Chinthamani & Achari/Malai Panner Tikka"
+                    : folio.orderItem
+                }
+              >
                 {folio.orderItem.slice(0, 9)}
                 {folio.orderItem.length > 9 && "..."}
               </span>
@@ -224,7 +231,7 @@ const AccordionItem = ({
             </svg>
             <span className="accordion__notes">Order Delivered</span>
             <span className="accordion__escalatedto">--</span>
-            <span className="accordion__time">17/01/24 00:10</span>
+            <span className="accordion__time">16/01/24 16:45</span>
           </p>
         ) : null}
       </div>
