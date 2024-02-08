@@ -67,7 +67,11 @@ const Accordion = ({ currentFolioData }) => {
               <span className="folio__ordertime">{folio.orderTime}</span>
               <span className="folio__assignedto">{folio.assignedTo}</span>
               <span className="folio__deliverytime">
-                {folio.deliveryTime ? folio.deliveryTime : "--"}
+                {folio.deliveryTime
+                  ? folio.status === "Delay" && currentFolioData === "all"
+                    ? "16:45"
+                    : folio.deliveryTime
+                  : "--"}
               </span>
               <span
                 className={`folio__status 
