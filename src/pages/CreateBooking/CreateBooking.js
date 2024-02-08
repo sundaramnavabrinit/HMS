@@ -22,7 +22,7 @@ const CreateBooking = () => {
   return (
     <div className="CreateBooking">
       <div className="CB__heading">
-        <h5>Create Booking</h5>
+        <h5>Room Allocation</h5>
         <span />
       </div>
       <div className="CB__tabs">

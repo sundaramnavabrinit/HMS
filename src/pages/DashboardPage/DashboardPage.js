@@ -90,7 +90,7 @@ const DashboardPage = () => {
           name="reservationId"
         />
         <button>
-          <Link to="/dashboard/create/personal">Create Booking</Link>
+          <Link to="/dashboard/create/personal">Allocate Room</Link>
         </button>
       </div>
 
