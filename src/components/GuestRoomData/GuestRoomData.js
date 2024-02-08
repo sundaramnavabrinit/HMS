@@ -115,9 +115,7 @@ const GuestRoomData = () => {
           </span>
           <span className="buttons__AD">
             {!paid && accept ? (
-              <button className="AD__awaiting" onClick={() => setAccept(false)}>
-                Awaiting Payment
-              </button>
+              <button className="AD__awaiting">Awaiting Payment</button>
             ) : paid ? (
               <button>Late Checkout</button>
             ) : (

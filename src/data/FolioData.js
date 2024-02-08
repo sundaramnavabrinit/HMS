@@ -25,7 +25,7 @@ const FolioData = [
   {
     id: 1235,
     orderItem: "Chicken Chinthamani",
-    qty: 1,
+    qty: 2,
     price: "",
     orderTime: "16/01/2024 22:50",
     assignedTo: "Anees Devan",

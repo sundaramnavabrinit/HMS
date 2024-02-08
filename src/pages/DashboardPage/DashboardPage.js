@@ -130,7 +130,7 @@ const DashboardPage = () => {
               <div onClick={() => toast.dismiss()}>
                 <Link to="/guest/room">
                   <p>Late Check-out request Raised</p>
-                  <p>Room 405: late checkout request</p>
+                  <p>Room 405: Late checkout request</p>
                 </Link>
               </div>
             )
