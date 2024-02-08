@@ -47,7 +47,7 @@ const CreateBooking = () => {
       <div className="CB__next">
         <button className="CB__CancelButton">Cancel</button>
         {tab === "room" ? (
-          <Modal name="Create Booking" show={show} setShow={setShow}>
+          <Modal name="Proceed" show={show} setShow={setShow}>
             <RoomSuccess setShow={setShow} />
           </Modal>
         ) : (
