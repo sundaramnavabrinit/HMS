@@ -38,7 +38,7 @@ const Notifications = () => {
       room: 405,
       message: "Food order delayed",
       time: "15 min ago",
-      type: "remainder",
+      type: "reminder",
       clientname: "Mr. A Amrit Deshpande",
     },
     {
@@ -104,10 +104,10 @@ const Notifications = () => {
                     ) : (
                       ""
                     )}
-                    {d.type === "remainder" ? (
+                    {d.type === "reminder" ? (
                       <Link to="/guest/room">
                         <span className="serviceescalation">
-                          Checkout Remainder
+                          Checkout Reminder
                         </span>
                       </Link>
                     ) : (
@@ -180,10 +180,10 @@ const Notifications = () => {
                     ) : (
                       ""
                     )}
-                    {d.type === "remainder" ? (
+                    {d.type === "reminder" ? (
                       <Link to="/guest/room">
                         <span className="serviceescalation">
-                          Checkout Remainder
+                          Checkout Reminder
                         </span>
                       </Link>
                     ) : (

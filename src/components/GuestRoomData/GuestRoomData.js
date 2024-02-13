@@ -82,7 +82,7 @@ const GuestRoomData = () => {
               toast.warning(
                 <div onClick={() => toast.dismiss()}>
                   <Link>
-                    <p>Guest Check-out remainder</p>
+                    <p>Guest Check-out reminder</p>
                     <p>Room 405: Guest check-out will be 12:00hrs</p>
                   </Link>
                 </div>
