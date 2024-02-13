@@ -8,11 +8,11 @@ import Rooms from "../../data/Rooms.js";
 import { toast } from "react-toastify";
 import { Link } from "react-router-dom";
 
-const GuestRoomData = () => {
+const GuestRoomData = ({ paid, setPaid }) => {
   const [accept, setAccept] = useState(false);
   const [checkAvail, setCheckAvail] = useState(false);
   const [acceptedLateCheckout, setAcceptedLateCheckout] = useState(false);
-  const [paid, setPaid] = useState(false);
+  // const [paid, setPaid] = useState(false);
 
   return (
     <div className="GuestRoomData">
@@ -45,7 +45,8 @@ const GuestRoomData = () => {
                 setPaid(true);
               }}
             >
-              {GuestRoom.checkout}
+              {paid ? "17/01/2024  2:00 hrs" : GuestRoom.checkout}
+              {/* //  {GuestRoom.checkout}  */}
             </span>
             {/* {!paid && accept && (
               <span

@@ -69,7 +69,7 @@ const Accordion = ({ currentFolioData }) => {
               <span className="folio__deliverytime">
                 {folio.deliveryTime
                   ? folio.status === "Delay" && currentFolioData === "all"
-                    ? "16:45"
+                    ? "16/01/24 17:10"
                     : folio.deliveryTime
                   : "--"}
               </span>
@@ -235,7 +235,7 @@ const AccordionItem = ({
             </svg>
             <span className="accordion__notes">Order Delivered</span>
             <span className="accordion__escalatedto">--</span>
-            <span className="accordion__time">16/01/24 16:45</span>
+            <span className="accordion__time">16/01/24 17:10</span>
           </p>
         ) : null}
       </div>

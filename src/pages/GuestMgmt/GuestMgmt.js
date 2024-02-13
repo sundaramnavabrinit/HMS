@@ -8,7 +8,7 @@ import GuestRoom from "../../components/GuestRoomData/GuestRoomData";
 
 const GuestMgmt = () => {
   const [tab, setTab] = useState("personal");
-
+  const [paid, setPaid] = useState(false);
   useEffect(() => {
     const path = window.location.pathname;
     const parts = path.split("/");
@@ -22,7 +22,9 @@ const GuestMgmt = () => {
         <p>
           <span>Guest name: Mr. Amrit Deshpande</span>
           <span>Checked in: 16/01/2024 12:00 hrs</span>
-          <span>Check out: 17/01/2024 12:00 hrs</span>
+          <span>
+            Check out: {paid ? "17/01/2024 2:00 hrs" : "17/01/2024 12:00 hrs"}
+          </span>
         </p>
       </div>
       <hr />
@@ -42,7 +44,7 @@ const GuestMgmt = () => {
       </div>
       {tab === "personal" ? <GuestPersonal /> : null}
       {tab === "folio" ? <GuestFolio /> : null}
-      {tab === "room" ? <GuestRoom /> : null}
+      {tab === "room" ? <GuestRoom paid={paid} setPaid={setPaid} /> : null}
     </div>
   );
 };
